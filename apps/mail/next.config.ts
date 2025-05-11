@@ -50,7 +50,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/api/mailto-handler',
-        destination: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/mailto-handler`,
+        destination: `https://dc0kkw0k8go0oow44w80s8sc.automatadr.com/api/mailto-handler`,
       },
     ];
   },
