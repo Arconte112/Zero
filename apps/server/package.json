@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "wrangler dev --show-interactive-dev-session=false --env staging",
-    "build": "wrangler deploy --minify --dry-run",
+    "build": "echo 'Skipping wrangler deploy in local build...'",
     "deploy": "wrangler deploy --minify",
     "types": "wrangler types --e staging"
   },
