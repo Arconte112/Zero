@@ -1,3 +1,9 @@
+// next.config.ts
+// 1. Mete esto arriba, antes de cualquier uso de process.env
+process.env.NEXT_PUBLIC_BACKEND_URL ??= 'https://dc0kkw0k8go0oow44w80s8sc.automatadr.com';
+process.env.NEXTAUTH_URL ??= process.env.NEXT_PUBLIC_BACKEND_URL;
+
+// 2. Luego tu configuración normal:
 import createNextIntlPlugin from 'next-intl/plugin';
 import type { NextConfig } from 'next';
 
@@ -50,7 +56,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/api/mailto-handler',
-        destination: `https://dc0kkw0k8go0oow44w80s8sc.automatadr.com/api/mailto-handler`,
+        destination: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/mailto-handler`,
       },
     ];
   },
